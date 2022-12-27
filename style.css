@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+  gap: 1rem;
+}
+
