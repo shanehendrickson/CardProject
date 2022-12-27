@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --clr-primary: #88abff;
+  --clr-primary: #155847;
 }
 
 * {
@@ -99,6 +99,10 @@ body {
 
 .card-body .desc {
   align-self: center;
+}
+
+.card-section {
+  margin-top: 0.25rem;
 }
 
 .card-footer {
