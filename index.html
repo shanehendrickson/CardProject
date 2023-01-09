@@ -8,46 +8,67 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/c7ed50e499.js" crossorigin="anonymous"></script>
 
+  <script src="app.js" defer></script>
+
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
+  <div class="modal-container hidden" id="modal-container">
+    <div class="modal">
+      <div class="content">
+        <header>
+          <p>Add a new Card</p>
+          <button class="btn btn-close" id="btn-close"><i class="fa-solid fa-xmark"></i></button>
+          
+        </header>
+
+        <form action="#">
+
+          <div class="row title">
+            <label>Title</label>
+            <input id="form-title" type="text">
+          </div>
+
+          <!-- image input here? -->
+
+          <div class="row img-caption">
+            <label>Caption</label>
+            <input id="form-caption" type="text">
+          </div>
+
+          <div class="row heading-1">
+            <label>Heading 1</label>
+            <input id="form-heading-1" type="text">
+          </div>
+
+          <div class="row content-1">
+            <label>Content 1</label>
+            <textarea id="form-content-1"></textarea>
+          </div>
+
+          <div class="row heading-2">
+            <label>Heading 2</label>
+            <input id="form-heading-2" type="text">
+          </div>
+
+          <div class="row content-2">
+            <label>Content 2</label>
+            <textarea id="form-content-2"></textarea>
+          </div>
+
+          <button id="add-card">Add Card</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <div class="wrapper">
 
-
-      <div class="card new-card">
+      <div class="card new-card" id="new-card">
         <div class="icon"><i class="fa-solid fa-plus"></i></div>
-        <p>Add new card</p>
+        <p>Add a new card</p>
       </div>
-
-      <div class="card content-card">
-        <div class="card-header">
-          <p class="title">Clint</p>
-          <button class="btn btn-delete">X</button>
-        </div>
-
-        <div class="card-body">
-          
-          <img src="images/Clint.png" alt="">
-          <span class="desc">Winter 26</span>
-          <div class="card-section">
-            <h4>Loves</h4>
-            <p>Amethyst, Aquamarine, Artichoke Dip, Emerald, Fiddlehead Risotto, Gold Bar, Iridium Bar, Jade, Omni Geode, Ruby, Topaz</p>            
-          </div>
-          <div class="card-section">
-            <h4>Likes</h4>
-            <p>Copper Bar, Iron</p>            
-          </div>
-          
-        </div>
-
-        <div class="card-footer">
-          <button class="btn btn-edit">Edit</button>
-        </div>
-      </div>
-
-
 
 
     

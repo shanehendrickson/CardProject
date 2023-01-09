@@ -2,6 +2,7 @@
 
 :root {
   --clr-primary: #155847;
+  --clr-primary-light: #1f7f67;
 }
 
 * {
@@ -30,9 +31,16 @@ body {
   padding: 10px;
 }
 
+.card .card-body {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 .new-card, 
 .icon, 
-.card-footer {
+.card-footer,
+.content header,
+.modal {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,7 +64,7 @@ body {
 
 .new-card p {
   color: var(--clr-primary);
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 1.25rem;
 }
 
@@ -79,7 +87,7 @@ body {
   font-weight: 500;
 }
 
-.card p {
+.content-card p {
   display: block;
   margin-top: 5px;
   color: #575757;
@@ -97,7 +105,7 @@ body {
   align-self: center;
 }
 
-.card-body .desc {
+.card-body .caption {
   align-self: center;
 }
 
@@ -114,6 +122,8 @@ body {
   color: #fff;
   font-size: 1.25rem;
   font-weight: 600;
+  cursor: pointer;
+  background: none;
 }
 
 .btn.btn-delete {
@@ -122,12 +132,112 @@ body {
   background-color: red;
 }
 
+.btn.btn-delete:hover {
+  opacity: .75;
+}
+
 .btn.btn-edit {
   display: inline-block;
   width: 100%;
   height: 2rem;
   background-color: var(--clr-primary);
 }
+
+.btn.btn-edit:hover {
+  background-color: var(--clr-primary-light);
+}
+
+/* Note Modal */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.modal-container .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  max-width: 300px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+}
+
+.modal .content {
+  background: #fff;
+  border-radius: 5px;
+  /* set height to match card? */
+}
+
+.modal-container,
+.modal-container .modal {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.2s ease;
+}
+
+.modal-container.hidden,
+.modal-container.hidden .modal {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal .content header {
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+}
+
+.content header p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.content header i {
+  color: #8b8989;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.content form {
+  margin: 1rem 1.5rem 2rem;
+}
+
+.content form .row {
+  margin: .25rem 0 1rem;
+}
+
+
+.content form :where(input, textarea) {
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #999;
+  height: 1.5rem;
+  padding: 4px;
+}
+
+.content form textarea {
+  resize: none;
+  height: 6rem;
+}
+
+.content form button {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  background: var(--clr-primary-light);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 
 
 /* .content-card {
