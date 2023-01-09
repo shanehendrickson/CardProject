@@ -48,7 +48,9 @@ function showCards() {
 
         <div class="card-body">
           
-          <img src="" alt="">
+          <div id="display-image">
+            
+          </div>
           <span class="caption">${card.caption}</span>
           <div class="card-section">
             <h4 class="heading-1">${card.heading1}</h4>

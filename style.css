@@ -58,7 +58,7 @@ body {
   color: var(--clr-primary);
   font-size: 2.5rem;
   border-radius: 50%;
-  border: 2px dashed var(--clr-primary);  
+  border: 4px ridge var(--clr-primary);  
   justify-content: center;
 }
 
